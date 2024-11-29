@@ -1,0 +1,96 @@
+.taskFinished {
+    background-color: rgba(50, 50, 50, 1) !important;
+}
+
+.prioLow {
+    color: rgba(0, 150, 0, 1) !important;
+}
+
+.prioMid {
+    color: rgba(255, 140, 0, 1) !important;
+}
+
+.prioHigh {
+    color: rgba(210, 0, 0, 1) !important;
+}
+
+.taskFinished>* {
+    color: rgba(200, 200, 200, 1);
+    text-decoration: line-through;
+}
+
+.addForm {
+    position: fixed;
+    padding: 10px;
+    top: 0;
+    right: 0;
+    display: flex;
+}
+
+.addBtn {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.2rem;
+    border-radius: 100dvw;
+    border: none;
+    background-color: rgba(0, 150, 0, 1);
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+
+.addTask {
+    margin: 0.5rem 2rem;
+    padding: 20px;
+    background-color: var(--main-col);
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+}
+
+.formFieldWrap>* {
+    color: var(--main-bg) !important;
+}
+
+.formFieldWrap label {
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+.formFieldWrap input {
+    padding: 2px;
+}
+
+.addBtn:hover {
+    background-color: rgba(0, 100, 0, 1);
+}
+
+.formFieldWrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.formFieldWrap option {
+    color: black;
+}
+
+.formBtn {
+    margin-top: 10px;
+    background-color: rgba(0, 150, 0, 1);
+    transition-duration: 300ms;
+    padding: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+.formBtn:hover {
+    background-color: rgba(0, 100, 0, 1);
+}
+
+.disabled {
+    cursor: default !important;
+    background-color: rgba(50, 50, 50, 1) !important;
+}
+
+.disabled:hover {
+    background-color: rgba(50, 50, 50, 1) !important;
+}
