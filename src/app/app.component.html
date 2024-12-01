@@ -1,5 +1,5 @@
 <div class="addForm">
-  <form action="" class="addTask">
+  <form action="" class="addTask" *ngIf="isMenuOpen">
     <div class="formFieldWrap">
       <label for="addTitle">Tytuł zadania</label>
       <input type="text" name="addTitle" id="addTitle" (input)="checkAdding()" [(ngModel)]="addTitle">
@@ -14,10 +14,13 @@
     </div>
     <button class="formBtn disabled" *ngIf="!readyToAdd else ready" disabled>Dodaj zadanie</button>
     <ng-template #ready>
-      <button class="formBtn">Dodaj zadanie</button>
+      <button class="formBtn" (click)="addTask()">Dodaj zadanie</button>
     </ng-template>
   </form>
-  <button class="addBtn">+</button>
+  <button class="addBtn" (click)="toggleMenu()">
+    <span *ngIf="isMenuOpen else menuClosed">X</span>
+    <ng-template #menuClosed>+</ng-template>
+  </button>
 </div>
 
 <table>

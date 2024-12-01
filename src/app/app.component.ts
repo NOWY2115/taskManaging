@@ -19,16 +19,42 @@ export class AppComponent {
     return;
   }
 
+  isMenuOpen: boolean = false;
 
   addTitle: string = "";
   addPrio: string = "low";
   readyToAdd: boolean = false;
+
 
   checkAdding = () => {
     console.log(this.addTitle);
     if (this.addTitle.length < 1) this.readyToAdd = false;
     else this.readyToAdd = true;
   }
+
+  toggleMenu = () => {
+    if (this.isMenuOpen)
+      this.isMenuOpen = false;
+    else this.isMenuOpen = true;
+  };
+
+  addTask = () => {
+    let prio = 0;
+    switch (this.addPrio) {
+      case "low":
+        prio = 2;
+        break;
+      case "mid":
+        prio = 1;
+        break;
+      case "high":
+        prio = 0;
+        break;
+    }
+
+    let task = new Task(this.addTitle, prio, false);
+    this.tasks.push(task);
+  };
 
 
 }
